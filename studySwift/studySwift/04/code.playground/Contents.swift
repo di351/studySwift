@@ -1,53 +1,32 @@
 import UIKit
 
-func sum(a: Int, b: Int) -> Int {
-    return a + b
-}
+var integerSet: Set<Int> = Set<Int>()
+integerSet.insert(1)
+integerSet.insert(100)
+integerSet.insert(99)
+integerSet.insert(99)
+integerSet.insert(99)
 
-func printMyName(name: String) -> Void {
-    print(name)
-}
+print(integerSet)
+print(integerSet.contains(1))
+print(integerSet.contains(2))
 
-func printYourName(name: String) {
-    print(name)
-}
+integerSet.remove(100)
+integerSet.removeFirst()
 
-func maximumIntegerValue() -> Int {
-    return Int.max
-}
+print(integerSet.count)
 
-func greeting(friend: String, me: String = "dakeong") {
-    print("Hello \(friend)! I'm \(me)")
-}
+let setA: Set<Int> = [1, 2, 3, 4, 5]
+let setB: Set<Int> = [3, 4, 5, 6, 7]
 
-greeting(friend: "hana")
-greeting(friend: "john", me: "eric")
+let union: Set<Int> = setA.union(setB)
+print(union)
 
+let sortedUnion: [Int] = union.sorted()
+print(sortedUnion)
 
-func greeting(to friend: String, from me: String) {
-    print("Hello \(friend)! I'm \(me)")
-}
+let intersection: Set<Int> = setA.intersection(setB)
+print(intersection)
 
-greeting(to: "hana", from: "dakeong")
-
-
-func sayHelloToFriends(me: String, friends: String...) -> String {
-    return "Hello \(friends)! I'm \(me)!"
-}
-print(sayHelloToFriends(me: "dakeong", friends: "hana", "eric", "wing"))
-
-print(sayHelloToFriends(me: "dakeong"))
-
-var someFunction: (String, String) -> Void = greeting(to:from:)
-someFunction("eric", "dakeong")
-
-someFunction = greeting(friend:me:)
-someFunction("eric", "dakeong")
-
-func runAnother(function: (String, String) -> Void) {
-    function("jenny", "mike")
-}
-
-runAnother(function: greeting(friend:me:))
-
-runAnother(function: someFunction)
+let subtracting: Set<Int> = setA.subtracting(setB)
+print(subtracting)
