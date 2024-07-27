@@ -35,4 +35,4 @@ print(anyDictionary)
 
 let emptyDictionary: [String: String] = [:]
 
-let initalizedDictionary: [String: String] = ["name": "yagom", "gender": "male"]
+let initalizedDictionary: [String: String] = ["name": "dakeong", "gender": "male"]

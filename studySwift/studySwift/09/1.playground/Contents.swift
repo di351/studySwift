@@ -54,10 +54,10 @@ class Student {
 
 Student.selfIntroduce()
 
-var yagom: Student = Student()
-yagom.name = "dakeong"
-yagom.class = "스위프트"
-yagom.selfIntroduce()
+var dakeong: Student = Student()
+dakeong.name = "dakeong"
+dakeong.class = "스위프트"
+dakeong.selfIntroduce()
 
 let jina: Student = Student()
 jina.name = "jina"
